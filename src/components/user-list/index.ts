@@ -1,6 +1,10 @@
 import UserList from './user-list.vue';
 import { createApp } from 'vue';
 import { attributeNames, root } from './root';
+import { showBye } from '../../libs/test';
+import '@/styles/base.css'
+
+
 
 class UserListClass extends HTMLElement {
   static get observedAttributes() {
@@ -13,10 +17,10 @@ class UserListClass extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' });
-
+    showBye()
     const linkEl = document.createElement('link');
     linkEl.setAttribute('rel', 'stylesheet');
-    linkEl.setAttribute('href', '/antd.min.css');
+    linkEl.setAttribute('href', '/assets/base-css.css');
     this.shadowRoot.appendChild(linkEl);
 
     this.appDiv = document.createElement('div');

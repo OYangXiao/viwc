@@ -7,6 +7,9 @@
   <a-input></a-input>
   <a-button type="primary" >waefwae</a-button>
   <a-switch >wefwef</a-switch>
+  <div class="flex">
+    <div class="h-12 w-12">wafewef</div>
+  </div>
 </template>
 <script lang="ts" setup>
 import UserBadge from './user-badge.vue';
