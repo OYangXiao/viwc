@@ -4,24 +4,24 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  alias: [{ find: '@', replacement: path.resolve(__dirname, '/src') }],
+  resolve: {
+    alias: [
+      { find: '@', replacement: path.resolve(__dirname, '/src') },
+      { find: 'vue', replacement: path.resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm-browser.js') },
+    ],
+  },
   clearScreen: false,
   plugins: [vue()],
   build: {
-    manifest: true,
+    // manifest: true,
     rollupOptions: {
       input: {
         homepage: path.resolve(__dirname, 'pages/homepage.html'),
-        'user-list': path.resolve(__dirname, 'src/components/user-list/index.ts'),
-        'user-info': path.resolve(__dirname, 'src/components/user-info/index.ts'),
-        'base-css': path.resolve(__dirname, 'src/styles/base.css'),
+        // 'user-list': path.resolve(__dirname, 'src/components/user-list/index.ts'),
       },
       output: {
         format: 'esm',
         entryFileNames: '[name].[hash].js',
-        manualChunks:{
-          vue:['vue'],
-        }
       },
     },
   },
