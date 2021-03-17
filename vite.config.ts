@@ -7,7 +7,6 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, '/src') },
-      { find: 'vue', replacement: path.resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm-browser.js') },
     ],
   },
   clearScreen: false,
