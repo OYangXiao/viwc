@@ -7,6 +7,7 @@
 <style scoped>
 .title{
   font-size: 40px;
+  color:darkolivegreen;
 }
 </style>
 <script lang="ts" setup>

@@ -16,8 +16,8 @@ export default defineConfig({
     // manifest: true,
     rollupOptions: {
       input: {
-        homepage: path.resolve(__dirname, 'pages/homepage.html'),
-        // 'user-list': path.resolve(__dirname, 'src/components/user-list/index.ts'),
+        'user-list': path.resolve(__dirname, 'src/components/user-list/user-list.ts'),
+        'user-info': path.resolve(__dirname, 'src/components/user-info/user-info.ts'),
       },
       output: {
         format: 'esm',
