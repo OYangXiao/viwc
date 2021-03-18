@@ -11,27 +11,12 @@
 }
 </style>
 <script lang="ts" setup>
-import { reactive, ref, watch, watchEffect, computed, getCurrentInstance } from 'vue';
+import { getCurrentInstance } from 'vue';
 import { root } from './root';
-
-const user = reactive({ name: 'oyx', gender: 'male' });
-const userBadge = ref(null);
-const showBadge = () => {
-  console.log(userBadge);
-};
 
 setTimeout(() => {
   root.props.name = 'ooo';
 }, 2000);
-
-
-const doSomething = () => {
-  return user
-};
-
-const fireEvent = ()=>{
-  
-}
 
 root.instance = getCurrentInstance();
 </script>

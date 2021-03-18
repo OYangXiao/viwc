@@ -5,3 +5,4 @@ dist-ssr
 *.local
 yarn.lock
 npm.lock
+package-lock.json
