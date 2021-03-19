@@ -1,7 +1,5 @@
 node_modules
 .DS_Store
 dist
-dist-ssr
+types
 *.local
-yarn.lock
-npm.lock
